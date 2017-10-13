@@ -1,0 +1,151 @@
+/**
+ * 
+ */
+package com.expedia.web.util;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+
+/**
+ * @author Hala Odeh
+ * @since Oct 13, 2017
+ */
+public class ExpediaClientHelper {
+
+    private final static Logger logger  = Logger.getLogger("ExpediaClientHelper");
+    private static final String BASE_URL         = "http://api.ean.com/ean-services/rs";
+
+    /**
+     * Sends post request from the provided url then parse String to map
+     * 
+     * @param reqUrl
+     * @param queryString
+     * @return Map
+     * @throws Exception
+     */
+    public static Map sendHttpPost(String reqUrl, String queryString) throws Exception {
+        Map mapOutput = null;
+        try {
+            // Send HttpPost
+            String output = sendHttpPostAndGetAsString(reqUrl, queryString);
+
+            // Output the response
+            logger.info("sendHttpPost " + output);
+
+            // Parse String to map
+            mapOutput = parseStringToMap(output, "&", true);
+        } catch (MalformedURLException ex) {
+            logger.error("MalformedURLException reqUrl: " + reqUrl + ", queryString: " + queryString, ex);
+        } catch (IOException ex) {
+            logger.error("MalformedURLException: reqUrl: " + reqUrl + ", queryString: " + queryString);
+        }
+
+        return mapOutput;
+    }
+
+    /**
+     * Sends post request from the provided url
+     * 
+     * @param reqUrl
+     * @param queryString
+     * @return
+     * @throws MalformedURLException 
+     * @throws IOException 
+     * @throws Exception
+     */
+    public static String sendHttpPostAndGetAsString(String reqUrl, String queryString) throws MalformedURLException,
+    IOException, Exception {
+        try {
+            StringBuffer output = null;
+
+            logger.info("Current Request URL: " + reqUrl);
+            logger.info("Current Request queryString: " + queryString);
+
+            // Send the request
+            URL url = new URL(reqUrl);
+            URLConnection conn = url.openConnection();
+            conn.setDoOutput(true);
+            OutputStreamWriter writer = new OutputStreamWriter(conn.getOutputStream());
+
+            // write parameters
+            writer.write(queryString);
+            writer.flush();
+
+            // Get the response
+            output = new StringBuffer();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line);
+            }
+            writer.close();
+            reader.close();
+
+            // Output the response
+            logger.info(output.toString());
+
+            return output.toString();
+        } catch (MalformedURLException ex) {
+            logger.error("MalformedURLException: reqUrl: " + reqUrl + ", queryString: " + queryString);
+            throw ex;
+        } catch (IOException ex) {
+            logger.error("IOException: reqUrl: " + reqUrl + ", queryString: " + queryString);
+            throw ex;
+        } catch (Exception e) {
+            logger.error("Exception: reqUrl: " + reqUrl + ", queryString: " + queryString);
+        }
+
+        return null;
+    }
+
+    /**
+     * Parses a String into a Map.
+     * 
+     * @param src The string to convert into a map
+     * @param separator The separator used within the string
+     * @param handleAndSign flag if true & sign is replaced with //& and should later
+     *            be handled accordingly
+     * @return The map that matches the string
+     * @throws Exception
+     */
+    public static final Map<String, String> parseStringToMap(String src, String separator, boolean handleAndSign)
+    throws Exception {
+        Map<String, String> nameValuePair = new HashMap<String, String>();
+
+        if (src != null && src.trim().length() > 0) {
+            String name = null;
+            String value = null;
+
+            String[] namesValues = src.toString().split(separator);
+
+            for (String nameValue : namesValues) {
+
+                if (nameValue.indexOf("=") == -1) {
+                    value = new StringBuilder(nameValuePair.get(name)).append(separator).append(nameValue).toString();
+                } else {
+                    name = nameValue.substring(0, nameValue.indexOf("="));
+                    value = nameValue.substring(nameValue.indexOf("=") + 1);
+                }
+
+                // If value contains //& then replace back with &
+                if (handleAndSign && value.indexOf("//&") != -1) {
+                    value = value.replaceAll("//&", "&");
+                }
+
+                nameValuePair.put(name, value);
+            }
+        }
+
+        return nameValuePair;
+    }
+
+}

@@ -1,0 +1,8 @@
+#Fri Oct 13 15:49:13 EEST 2017
+eclipse.preferences.version=1
+TASKS_FILTERS_MIGRATE=true
+tipsAndTricks=true
+platformState=1483437902565
+org.eclipse.ui.internal.views.markers.CachedMarkerBuilderorg.eclipse.ui.views.ProblemView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<filterGroups andFilters\="false">\r\n<filterGroup IMemento.internal.id\="All Errors" enabled\="true" scope\="2" workingSet\="Aggregate for window 1276501192753">\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="4"/>\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\r\n</filterGroup>\r\n<filterGroup IMemento.internal.id\="Warnings on Selection" enabled\="true" scope\="2" workingSet\="Aggregate for window 1276501192753">\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="2"/>\r\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\r\n</filterGroup>\r\n</filterGroups>
+EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
+PROBLEMS_FILTERS_MIGRATE=true

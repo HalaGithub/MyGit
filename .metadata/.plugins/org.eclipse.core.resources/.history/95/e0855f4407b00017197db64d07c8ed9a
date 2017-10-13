@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package com.expedia.web.util;
+
+/**
+ * @author Hala Odeh
+ * @since Oct 13, 2017
+ */
+public class ExpediaClientHelper {
+    
+    private static final String BASE_URL         = "http://api.ean.com/ean-services/rs";
+    
+    
+
+}

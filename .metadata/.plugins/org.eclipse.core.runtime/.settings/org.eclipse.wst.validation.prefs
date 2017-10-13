@@ -1,0 +1,12 @@
+#Fri Oct 13 07:02:00 EEST 2017
+override=false
+USER_MANUAL_PREFERENCE=enabledManualValidatorListorg.eclipse.wst.wsi.ui.internal.WSIMessageValidator;com.ibm.ws.ast.ext.web.internal.validation.WarValidator;org.eclipse.jst.j2ee.internal.validation.UIApplicationClientValidator;org.eclipse.wst.common.componentcore.internal.ModuleCoreValidator;org.eclipse.jst.j2ee.internal.ejb.workbench.validation.UIEjbValidator;com.ibm.etools.publishing.server.internal.validation.PubServerConfigValidator;org.eclipse.jpt.core.internal.validation.JpaValidator;com.ibm.etools.ejb.mapvalidator.MapValidation;org.eclipse.jst.j2ee.internal.validation.UIEarValidator;com.ibm.ast.ws.ext.validator.WsExtValidator;org.eclipse.jst.j2ee.internal.classpathdep.ClasspathDependencyValidator;com.ibm.etools.validation.ejb.ext.EJBValidatorExt;com.ibm.etools.j2ee.migration.classpath.J2EEClasspathValidator;org.eclipse.jst.j2ee.internal.jca.validation.UIConnectorValidator;com.ibm.etools.struts.version.validation.StrutsVersionValidator;com.ibm.etools.j2ee.ws.ext.validation.AppClientValidator;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;
+suspend=true
+stateTS=0
+eclipse.preferences.version=1
+vf.version=3
+DELEGATES_PREFERENCE=delegateValidatorList
+saveAuto=false
+confirmDialog=true
+USER_PREFERENCE=saveAutomaticallytrueprojectsCanOverridetruedisableAllValidationtrueversion1.2.15.v201011152200
+USER_BUILD_PREFERENCE=enabledBuildValidatorListorg.eclipse.wst.wsi.ui.internal.WSIMessageValidator;com.ibm.ws.ast.ext.web.internal.validation.WarValidator;org.eclipse.jst.j2ee.internal.validation.UIApplicationClientValidator;org.eclipse.wst.common.componentcore.internal.ModuleCoreValidator;org.eclipse.jst.j2ee.internal.ejb.workbench.validation.UIEjbValidator;com.ibm.etools.publishing.server.internal.validation.PubServerConfigValidator;org.eclipse.jpt.core.internal.validation.JpaValidator;com.ibm.etools.ejb.mapvalidator.MapValidation;org.eclipse.jst.j2ee.internal.validation.UIEarValidator;com.ibm.ast.ws.ext.validator.WsExtValidator;org.eclipse.jst.j2ee.internal.classpathdep.ClasspathDependencyValidator;com.ibm.etools.validation.ejb.ext.EJBValidatorExt;com.ibm.etools.j2ee.migration.classpath.J2EEClasspathValidator;org.eclipse.jst.j2ee.internal.jca.validation.UIConnectorValidator;com.ibm.etools.struts.version.validation.StrutsVersionValidator;com.ibm.etools.j2ee.ws.ext.validation.AppClientValidator;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;

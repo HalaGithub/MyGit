@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.expedia.web.util;
+
+/**
+ * @author Hala Odeh
+ * @since Oct 13, 2017
+ */
+public class ExpediaClientHelper {
+    
+    private static final String BASE_URL         = "http://api.ean.com/ean-services/rs";
+    
+    private String buildPath(final String path, final Parameter... parameters) { 
+        178              
+        179             final StringBuilder buf = new StringBuilder(BASE_URL); 
+        180              
+        181             buf.append(path); 
+        182             buf.append("?cid=").append(customerId); 
+        183             buf.append("&apiKey=").append(apiKey); 
+        184             buf.append("&minorRev=").append(MINOR_REVISION); 
+        185             buf.append("&currencyCode=EUR"); 
+        186             buf.append("&locale=de_DE"); 
+        187             buf.append("&customerUserAgent=").append(userAgent); 
+        188             buf.append("&customerIpAddress=").append(ipAddress); 
+        189 
+         
+        190             for (final Parameter parameter : parameters) { 
+        191                     buf.append("&").append(parameter.getKey()).append("=").append(parameter.getValue()); 
+        192             } 
+        193              
+        194             return buf.toString(); 
+        195     } 
+
+
+}

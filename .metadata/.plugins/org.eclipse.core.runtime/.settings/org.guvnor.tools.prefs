@@ -1,0 +1,8 @@
+#Fri Oct 13 07:01:58 EEST 2017
+overlay_location=1
+show_revision=true
+save_passwords=true
+eclipse.preferences.version=1
+show_change_indicator=true
+show_datetime=true
+guvnor_loc_template=http\://localhost\:8080/drools-guvnor/org.drools.guvnor.Guvnor/webdav

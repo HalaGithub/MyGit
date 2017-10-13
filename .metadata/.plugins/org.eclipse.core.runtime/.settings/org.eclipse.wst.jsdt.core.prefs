@@ -1,0 +1,21 @@
+#Fri Oct 13 07:01:59 EEST 2017
+org.eclipse.wst.jsdt.core.compiler.problem.fallthroughCase=warning
+org.eclipse.wst.jsdt.core.compiler.problem.unusedParameter=warning
+org.eclipse.wst.jsdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.wst.jsdt.core.compiler.problem.invalidJavadoc=warning
+org.eclipse.wst.jsdt.core.compiler.problem.missingJavadocTags=warning
+org.eclipse.wst.jsdt.core.compiler.problem.invalidJavadocTags=enabled
+org.eclipse.wst.jsdt.core.compiler.problem.missingJavadocComments=warning
+org.eclipse.wst.jsdt.core.codeComplete.deprecationCheck=enabled
+org.eclipse.wst.jsdt.core.compiler.problem.emptyStatement=warning
+org.eclipse.wst.jsdt.core.compiler.problem.possibleAccidentalBooleanAssignment=warning
+org.eclipse.wst.jsdt.core.formatter.tabulation.size=8
+eclipse.preferences.version=1
+org.eclipse.wst.jsdt.core.compiler.problem.nullReference=warning
+org.eclipse.wst.jsdt.core.compiler.problem.missingJavadocTagsVisibility=private
+org.eclipse.wst.jsdt.core.compiler.problem.potentialNullReference=warning
+org.eclipse.wst.jsdt.core.formatter.tabulation.char=mixed
+org.eclipse.wst.jsdt.core.compiler.problem.invalidJavadocTagsVisibility=private
+org.eclipse.wst.jsdt.core.compiler.problem.undocumentedEmptyBlock=warning
+org.eclipse.wst.jsdt.core.compiler.problem.unnecessaryElse=warning
+org.eclipse.wst.jsdt.core.compiler.problem.redundantNullCheck=warning

@@ -1,0 +1,9 @@
+#Fri Oct 13 07:01:59 EEST 2017
+copycon.autosave=true
+tostring.javadoc=/**\n * @see java.lang.Object\#toString()\n */\n @Override\n
+eclipse.preferences.version=1
+tostring.body=public String toString() {\n    final String COMMA \= ", ";\n\n    StringBuilder retValue \= new StringBuilder();\n    \n    retValue.append("${class_name} ( ")\n        .append(super.toString()).append(COMMA)\n        .append("${attribute} \= ").append(this.${attribute}).append(COMMA)\n        .append(" )");\n    \n    return retValue.toString();\n}\n
+copycon.javadoc=/**\n * Copy Constructor\n *\n * @param ${class_instance} a <code>${class_name}</code> object\n */\n
+tostring.autosave=true
+mode=stringbuilder
+copycon.body=public ${class_name}(${class_name} ${class_instance}) \n{\n    this.${attribute} \= ${class_instance}.${attribute};\n}\n

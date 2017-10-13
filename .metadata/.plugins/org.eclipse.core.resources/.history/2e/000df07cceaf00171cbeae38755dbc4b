@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.expedia.web.filter;
+
+/**
+ * @author Hala Odeh
+ * @since Oct 13, 2017
+ */
+public class UTF8Filter {
+
+}

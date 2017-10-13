@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.wst.common.project.facet.ui.internal.FacetsSelectionPanel">
+		<item value="600" key="sash.2.weight.1"/>
+		<item value="400" key="sash.2.weight.2"/>
+		<item value="700" key="sash.1.weight.1"/>
+		<item value="300" key="sash.1.weight.2"/>
+		<item value="358" key="cw.facet"/>
+		<item value="68" key="cw.version"/>
+	</section>
+</section>

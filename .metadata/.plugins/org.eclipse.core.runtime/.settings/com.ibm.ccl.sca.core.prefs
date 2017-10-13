@@ -1,0 +1,14 @@
+#Fri Oct 13 07:01:59 EEST 2017
+selectedImplType.implementation.web=true
+selectedImplType.implementation.jee=true
+projectFolder=
+namespace=http\://temp
+interfaceType=
+selectedImplType.implementation.spring=true
+selectedImplType.implementation.ejb=true
+extendedPref.com.ibm.ccl.sca.java.core.dataBinding=jaxb_2.0
+defaultImplType=
+selectedImplType.implementation.composite=true
+selectedImplType.implementation.java=true
+eclipse.preferences.version=1
+selectedImplType.implementation.widget=true
